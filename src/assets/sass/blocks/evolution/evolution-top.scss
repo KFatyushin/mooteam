@@ -1,0 +1,17 @@
+.evolution-top {
+    margin-bottom: 28px;
+
+    &__desk {
+        max-width: 600px;
+
+        margin-top: 8px;
+    }
+
+    @media (max-width: $small) {
+        text-align: center;
+
+        &__desk {
+            margin: 0 auto;
+        }
+    }
+}

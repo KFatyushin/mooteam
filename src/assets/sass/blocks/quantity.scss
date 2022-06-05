@@ -1,0 +1,54 @@
+.quantity {
+    height: 24px;
+
+    user-select: none;
+
+    position: relative;
+
+    @media (max-width: $ex-small) {
+        height: 22.4px;
+    }
+
+    &:hover {
+        .quantity__minus,
+        .quantity__plus {
+            opacity: .5;
+        }
+    }
+
+    &__minus,
+    &__plus {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        background: $purple;
+        border-radius: 100%;
+        opacity: 0;
+
+        font-weight: 600;
+        color: $white;
+        line-height: 31px;
+
+        cursor: pointer;
+        transition: opacity .5s;
+
+        &:hover {
+            opacity: 1 !important;
+        }
+    }
+
+    &__minus {
+        line-height: 30px;
+
+        margin-right: 15px;
+        transform: translateY(-1px);
+    }
+
+    &__plus {
+        margin-left: 15px;
+    }
+
+    &__gb {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,21 @@
+.popup-privacy-policy {
+    & .popup__block {
+        max-width: 900px;
+        height: 80vh;
+    }
+
+    & .popup__title {
+        max-width: initial;
+        min-height: 74px;
+    }
+
+    & .popup__desc {
+        height: 81%;
+
+        text-align: justify;
+
+        overflow-Y: scroll;
+        padding-right: 25px;
+        margin-top: 24px;
+    }
+}

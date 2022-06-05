@@ -1,0 +1,141 @@
+.tariffs {
+    padding: 50px 0 70px;
+    overflow: hidden;
+
+    @media (max-width: $large) {
+        padding-bottom: 100px;
+    }
+
+    & .container {
+        max-width: 1424px;
+    }
+
+    &-list {
+        position: relative;
+
+        & .swiper-wrapper {
+            align-items: flex-end;
+        }
+    }
+
+    &-main-list {
+        width: auto !important;
+        display: flex;
+        flex-shrink: 0;
+
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+
+        margin-right: 15px;
+
+        & .tariffs-item:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+
+        & .tariffs-item:last-child {
+            border-radius: 0 8px 8px 0;
+            border-right: 0;
+        }
+
+        & .tariffs-item:first-child,
+        & .tariffs-item:last-child {
+            width: 227px;
+        }
+
+        & .tariffs-item:nth-child(2),
+        & .tariffs-item:nth-child(3) {
+            width: 237px;
+        }
+    }
+
+    &-title {
+        max-width: 840px;
+
+        text-align: center;
+
+        margin: 0 auto 96px;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 70px;
+    }
+
+    &-pagination {
+        bottom: -32px !important;
+    }
+
+    @media (max-width: $large) {
+        padding: 80px 0 100px;
+
+        &-wrap {
+            max-width: 1000px;
+
+            margin: 70px auto 0;
+        }
+
+        &-title {
+            margin-bottom: 60px;
+        }
+
+        &-img {
+            max-width: 400px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        padding: 70px 0;
+
+        &-wrap {
+            max-width: 800px;
+        }
+
+        &-title {
+            max-width: 560px;
+
+            margin-bottom: 50px;
+        }
+
+        &-img {
+            max-width: 280px;
+
+            & img {
+                max-width: 300px;
+            }
+        }
+    }
+
+    @media (max-width: $small) {
+        padding: 32px 0 50px;
+
+        &-wrap {
+            flex-direction: column;
+        }
+
+        &-img {
+            max-width: initial;
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        padding: 32px 0 40px;
+
+
+        &-main-list {
+            margin-right: 8px;
+        }
+
+        &-wrap {
+            margin: 60px auto 0;
+        }
+    }
+
+
+}

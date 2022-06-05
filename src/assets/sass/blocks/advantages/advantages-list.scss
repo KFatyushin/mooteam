@@ -1,0 +1,365 @@
+.advantages-list {
+    position: relative;
+
+    @media (min-width: $medium) {
+        & .swiper-wrapper {
+            height: auto!important;
+            flex-direction: column;
+
+            transform: none !important;
+        }
+
+        &__item {
+            width: 100% !important;
+
+            &:nth-child(even) .advantages-list__img {
+                order: 1;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 160px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        & .advantages-list__img {
+            &:before,
+            &:after {
+                content: '';
+
+                position: absolute;
+                z-index: -1;
+            }
+        }
+
+        &:first-child .advantages-list__img {
+
+            &:before {
+                width: 162px;
+                height: 162px;
+                background: url("../img/advantages/icons/circle.svg") no-repeat center / cover;
+
+                top: -66px;
+                left: -57px;
+            }
+            &:after {
+                width: 194px;
+                height: 194px;
+                background: url("../img/advantages/icons/square.svg") no-repeat center / cover;
+
+                right: -93px;
+                bottom: -70px;
+
+                @media (max-width: $large) {
+                    right: -30px;
+                    bottom: -90px;
+                }
+            }
+        }
+        &:nth-child(2) .advantages-list__img {
+
+            &:before {
+                width: 130px;
+                height: 150px;
+                background: url("../img/advantages/icons/plus.svg") no-repeat center / cover;
+
+                top: -67px;
+                left: -66px;
+
+                @media (max-width: $large) {
+                    left: -40px;
+                }
+            }
+            &:after {
+                width: 152px;
+                height: 214px;
+                background: url("../img/advantages/icons/triangle.svg") no-repeat center / cover;
+
+                right: -52px;
+                bottom: -70px;
+            }
+        }
+        &:last-child .advantages-list__img {
+
+            &:before {
+                width: 164px;
+                height: 164px;
+                background: url("../img/advantages/icons/circle-patterns.svg") no-repeat center / cover;
+
+                top: -67px;
+                right: -76px;
+
+                @media (max-width: $large) {
+                    right: -30px;
+                }
+            }
+            &:after {
+                width: 147px;
+                height: 147px;
+                background: url("../img/advantages/icons/bagel.svg") no-repeat center / cover;
+
+                left: -74px;
+                bottom: -69px;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 450px;
+    }
+
+    &__title {
+        max-width: 350px;
+
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 140%;
+
+        color: #222;
+
+        margin-bottom: 22px;
+    }
+
+    &__desk {
+
+        & p {
+            margin-bottom: 22px;
+        }
+    }
+
+    &__img {
+        max-width: 600px;
+
+        position: relative;
+        z-index: 1;
+
+        & img {
+            width: 100%;
+            height: auto;
+            box-shadow: 1px 4px 10px 2px rgba(81, 77, 77, 0.2);
+            border-radius: 8px;
+        }
+    }
+
+    &__arrow-icon {
+        display: none;
+    }
+
+    @media (max-width: $large) {
+        &__item {
+            margin-bottom: 170px;
+        }
+        &__item:nth-child(odd) .advantages-list__content {
+            margin-left: 50px;
+        }
+        &__item:nth-child(even) .advantages-list__content {
+            margin-right: 50px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        &__item {
+            flex-direction: column;
+
+            margin-bottom: 0;
+
+            &:nth-child(odd) .advantages-list__content {
+                margin-left: 0;
+            }
+            &:nth-child(even) .advantages-list__content {
+                margin-right: 0;
+            }
+
+            &:first-child .advantages-list__img {
+                &:before {
+                    width: 84px;
+                    height: 84px;
+
+                    top: -25px;
+                    left: -31px;
+                }
+
+                &:after {
+                    width: 100px;
+                    height: 100px;
+
+                    right: -35px;
+                    bottom: -42px;
+                }
+            }
+
+            &:nth-child(2) .advantages-list__img {
+                &:before {
+                    width: 63px;
+                    height: 74px;
+
+                    top: -28px;
+                    left: -17px;
+                }
+
+                &:after {
+                    width: 74px;
+                    height: 104px;
+
+                    right: -19px;
+                    bottom: -28px;
+                }
+            }
+
+            &:last-child .advantages-list__img {
+                &:before {
+                    width: 74px;
+                    height: 74px;
+
+                    top: -22px;
+                    right: initial;
+                    left: -24px;
+                }
+
+                &:after {
+                    width: 100px;
+                    height: 100px;
+                    transform: rotate(-90deg);
+
+                    right: -36px;
+                    bottom: -30px;
+                    left: initial;
+                }
+            }
+        }
+
+        &__img {
+            max-width: 800px;
+        }
+
+        &__content {
+            max-width: 800px;
+
+            margin: 56px 0 0;
+        }
+
+        &__title {
+            max-width: 100%;
+
+            font-size: 26px;
+        }
+
+        &__desk {
+            display: flex;
+
+            & p {
+                width: 50%;
+                height: 100px;
+
+                margin-bottom: 0;
+
+                -ms-overflow-style: none;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                scrollbar-width: none;
+
+                &:first-child {
+                    margin-right: 40px;
+                }
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $small) {
+        &__title {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        & .swiper-wrapper {
+            height: auto!important;
+            flex-direction: column;
+
+            transform: none !important;
+        }
+
+        &__item {
+            width: 100% !important;
+            max-height: 80px;
+            background: #F2F2F2;
+            overflow: hidden;
+
+            padding: 12px 16px;
+            margin-bottom: 12px;
+
+            transition: max-height 1s;
+
+            &.active {
+                height: auto;
+                max-height: 700px;
+                background: $purple;
+
+                color: $white;
+
+                & h3 {
+                    color: $white;
+                }
+
+                & .advantages-list__arrow-icon {
+                    display: none;
+                }
+            }
+        }
+
+        &__img {
+            order: 1;
+
+            margin-top: 20px;
+
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+
+        &__content {
+            margin: 0 0 12px;
+        }
+
+        &__title {
+            width: 240px;
+        }
+
+        &__desk {
+            display: block;
+
+            & p {
+                width: 100%;
+                height: auto;
+                overflow: initial;
+
+                &:first-child {
+                    margin-bottom: 18px;
+                }
+            }
+        }
+
+        &__arrow-icon {
+            width: 12px;
+            height: 8px;
+            display: block;
+            fill: $purple;
+
+            position: absolute;
+            top: 22px;
+            right: 14px;
+        }
+    }
+}

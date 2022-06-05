@@ -1,0 +1,122 @@
+.contacts-intro-socials {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: -40px;
+
+    &__item {
+        width: 230px;
+        display: flex;
+        align-items: center;
+
+        margin: 0 18px 40px 0;
+    }
+
+    &__icon {
+        margin-right: 16px;
+
+        & img {
+            display: block;
+        }
+    }
+
+    &__data {
+        a {
+            line-height: 1.35;
+            color: #533278;
+            display: inline-block;
+            position: relative;
+
+            &:before,
+            &:after {
+                content: "";
+                bottom: 0;
+                width: 0;
+                display: block;
+                position: absolute;
+                background: #533278;
+                transition: .5s;
+            }
+
+            &:before {
+                right: 50%;
+            }
+
+            &:after {
+                left: 50%;
+            }
+        }
+    }
+
+    @media (min-width: $small) {
+        &__data a:hover:before,
+        &__data a:hover:after {
+            width: 50%;
+            height: 2px;
+        }
+    }
+
+    @media (max-width: $medium) {
+
+        margin: 0 -18px -20px 0;
+
+        &__item {
+            width: 200px;
+
+            margin-bottom: 20px;
+        }
+
+        &__icon {
+
+            & img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    @media (max-width: $small) {
+        &__item {
+            width: 180px;
+        }
+
+        &__icon {
+            margin-right: 10px;
+        }
+
+        &__data {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        margin: 0 0 -40px;
+
+        &__item {
+            width: 140px;
+            flex-direction: column;
+
+            margin: 0 auto 40px;
+        }
+
+        &__icon {
+            margin: 0 auto 10px;
+
+            & img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &__data {
+
+            & span {
+                margin: 0 0 6px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

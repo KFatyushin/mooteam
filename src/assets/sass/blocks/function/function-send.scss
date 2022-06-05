@@ -1,0 +1,15 @@
+.function-send {
+    padding: 50px 0 70px;
+
+    & .tariffs-wrap {
+        margin: 0 auto;
+    }
+
+    @media (max-width: $large) {
+        padding: 48px 0;
+    }
+
+    @media (max-width: $large) {
+        padding: 32px 0;
+    }
+}

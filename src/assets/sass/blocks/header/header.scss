@@ -1,0 +1,41 @@
+.header {
+    background: $purple;
+
+    &-home {
+        height: 100vh;
+        max-height: 853px;
+        min-height: 656px;
+        background: $purple url("../img/header-desc-bg.svg")no-repeat top / cover;
+
+        & .header-intro {
+            display: flex;
+        }
+    }
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1424px;
+        height: 100%;
+    }
+
+    @media (max-width: $large) {
+        height: auto;
+        max-height: initial;
+        min-height: initial;
+    }
+
+    @media (max-width: $small) {
+        background-image: url("../img/header-md-bg.svg");
+    }
+
+    @media (max-width: $ex-small) {
+        background-image: url("../img/header-sm-bg.svg");
+
+        padding-top: 48px;
+
+        & {
+            height: auto;
+        }
+    }
+}

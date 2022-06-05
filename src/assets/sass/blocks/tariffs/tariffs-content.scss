@@ -1,0 +1,49 @@
+.tariffs-content {
+
+    &__desc {
+        max-width: 660px;
+
+        font-size: 26px;
+        line-height: 140%;
+
+        margin-bottom: 76px;
+
+        @media (max-width: $large) {
+            max-width: 500px;
+
+            font-size: 20px;
+        }
+
+        @media (max-width: $medium) {
+            max-width: 460px;
+
+            font-size: 18px;
+
+            margin-bottom: 34px;
+        }
+    }
+
+    @media (max-width: $small) {
+        order: 1;
+
+        margin-top: 24px;
+
+        &__desc {
+            text-align: center;
+        }
+
+        &__form .send-mail {
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        &__desc {
+            font-size: 16px;
+
+            p {
+                display: inline;
+            }
+        }
+    }
+}

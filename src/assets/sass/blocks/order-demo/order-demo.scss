@@ -1,0 +1,26 @@
+.order-demo {
+    padding: 50px 0 70px;
+
+    &__img {
+        text-align: center;
+
+        margin-bottom: 64px;
+
+        & img {
+            width: 100%;
+            max-width: 481px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: $ex-small) {
+        padding: 50px 0;
+
+        &__img {
+            margin-bottom: 32px;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.tariffs-payment {
+    padding-top: 35px;
+
+    &__title {
+        margin-bottom: 35px;
+        color: #4f4f4f;
+        text-align:center;
+        font-size: 15px;
+        font-weight: 400;
+        display: block;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #E0E0E0;
+
+        text-align: center;
+
+        padding: 28px 50px;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    &__img,
+    &__desc {
+        width: 180px;
+    }
+
+    &__desc {
+        font-size: 14px;
+    }
+
+    @media (max-width: $large) {
+
+        &__item {
+            width: 100%;
+            padding: 28px 0;
+        }
+    }
+
+    @media (max-width: $medium) {
+        padding-top: 80px;
+
+        &__list {
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            width: 50%;
+            border-bottom: 1px solid #E0E0E0;
+
+            &:nth-child(2) {
+                border-right: 0;
+            }
+        }
+    }
+
+    @media (max-width: $ex-small) {
+
+        &__item {
+            padding: 20px 0;
+
+            &:nth-child(1) {
+
+                & img {
+                    width: 86px;
+                }
+            }
+            &:nth-child(2) {
+
+                & img {
+                    width: 58px;
+                }
+            }
+            &:nth-child(3) {
+
+                & img {
+                    width: 86px;
+                }
+            }
+        }
+
+        &__desc {
+            width: 190px;
+            padding-left: 10px;
+
+            font-size: 12px;
+        }
+    }
+
+}

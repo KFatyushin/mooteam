@@ -1,0 +1,55 @@
+.footer {
+    background: $purple;
+
+    & .container {
+        max-width: 1424px;
+    }
+
+    &-navbar {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 40px 0;
+
+        @media (max-width: 1200px) {
+            padding: 40px 0 43px;
+        }
+
+        @media (max-width: $medium) {
+            padding-top: 24px;
+        }
+
+        @media (max-width: $small) {
+            padding-bottom: 24px;
+        }
+    }
+
+    &-logo {
+        display: block;
+        line-height: 0;
+
+        margin-bottom: 32px;
+
+        &__icon {
+            display: block;
+            max-width: 163px;
+            height: 24px;
+
+            fill: $white;
+
+            @media (max-width: $ex-small) {
+                max-width: 138px;
+            }
+        }
+    }
+
+    @media (max-width: $medium) {
+        &-logo {
+            margin-bottom: 28px;
+
+            &__icon {
+                height: 56px;
+            }
+        }
+    }
+}

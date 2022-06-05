@@ -1,0 +1,46 @@
+.partners {
+    padding: 50px 0 70px;
+
+    &__title {
+        text-align: center;
+
+        margin-bottom: 40px;
+    }
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        bottom: -20px;
+
+        & .swiper-pagination-bullet {
+            width: 4px;
+            height: 4px;
+            opacity: 1;
+
+            margin: 0 4px;
+
+            &-active {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+
+    @media (max-width: $large) {
+        padding: 80px 0 70px;
+    }
+
+    @media (max-width: $small) {
+        padding: 56px 0 48px;
+
+        &__title {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.solutions-top {
+    max-width: 780px;
+
+    text-align: center;
+
+    padding: 50px 0;
+    margin: 0 auto;
+
+    &__title {
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 120%;
+        color: #000;
+
+        margin-bottom: 24px;
+    }
+
+    &__desc {
+        max-width: 530px;
+
+        margin: 0 auto;
+    }
+
+    @media (max-width: $large) {
+        &__title {
+            font-size: 44px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        padding: 50px 0;
+
+        &__title {
+            max-width: 500px;
+
+            font-size: 30px;
+
+            margin: 0 auto 16px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        padding: 32px 0;
+
+        &__title {
+            font-size: 24px;
+        }
+    }
+}

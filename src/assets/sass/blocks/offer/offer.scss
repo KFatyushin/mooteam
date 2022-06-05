@@ -1,0 +1,17 @@
+.offer {
+    padding: 56px 0 100px;
+
+    & .container {
+        max-width: 1424px;
+
+        display: flex;
+    }
+
+    @media (max-width: $small) {
+        padding: 40px 0 60px;
+
+        & .container {
+            display: block;
+        }
+    }
+}

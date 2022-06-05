@@ -1,0 +1,68 @@
+.footer-socials {
+    display: flex;
+
+    margin: 0 42px 0 auto;
+
+    &__item {
+        display: inherit;
+
+        margin-left: 16px;
+
+        transition: transform .5s;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+
+        fill: $white;
+    }
+
+    @media (min-width: $medium) and (max-width: 1200px) {
+        width: 100%;
+        order: 1;
+
+        margin: 24px 0 0 auto;
+
+        &__item:first-child {
+            margin-left: auto;
+        }
+    }
+
+    @media (max-width: $medium) {
+        margin: 0;
+
+        &__item:first-child {
+            margin-left: auto;
+        }
+
+        &__item:first-child {
+            margin-left: auto;
+        }
+
+        &__item:hover {
+            transform: translateY(-3px);
+        }
+
+        &__icon {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    @media (max-width: $small) {
+        width: 50%;
+        order: 1;
+
+        margin: 24px 0 0 auto;
+    }
+
+    @media (max-width: $ex-small) {
+        width: auto;
+        margin-top: 0;
+    }
+}

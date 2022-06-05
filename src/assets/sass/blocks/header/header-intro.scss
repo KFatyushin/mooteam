@@ -1,0 +1,129 @@
+.header-intro {
+    display: none;
+    align-items: center;
+
+    color: $white;
+
+    margin: auto 0;
+
+    &__content {
+        flex-shrink: 0;
+    }
+
+    &__title {
+        max-width: 600px;
+
+        font-size: 50px;
+        font-weight: 800;
+        line-height: 130%;
+
+        & span {
+            background: $red;
+
+            padding: 0 16px 4px;
+            margin-left: -16px;
+        }
+    }
+
+    &__desc {
+        max-width: 570px;
+
+        line-height: 150%;
+
+        margin: 20px 0 35px;
+    }
+
+    &__img {
+        min-width: 826px;
+        height: 464px;
+        border: 6px solid #3E1E63;
+        border-radius: 14px;
+
+        transform: translateX(145px);
+
+        position: relative;
+
+        &:after {
+            content: '';
+
+            display: block;
+            width: 784px;
+            height: 36px;
+            background: url("../img/intro-img-shadow.svg");
+
+            position: absolute;
+            bottom: -60px;
+            left: 21px;
+        }
+    }
+
+    @media (max-width: $large) {
+        padding: 40px 0 80px;
+
+        &__img {
+            transform: translateX(62px);
+        }
+
+        &__content {
+            padding-left: 10px;
+        }
+
+        &__title {
+
+            & span {
+                padding: 0 10px 4px;
+                margin: -10px;
+            }
+        }
+    }
+
+    @media (max-width: $medium) {
+        padding: 25px 0 60px;
+
+        &__title {
+            max-width: 425px;
+
+            font-size: 36px;
+        }
+
+        &__desc {
+            max-width: 425px;
+        }
+    }
+
+    @media (max-width: $small) {
+        padding: 40px 0;
+
+        &__img {
+            min-width: 674px;
+            height: 379px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        margin: 0 auto;
+
+        &__content {
+            flex-shrink: 1;
+
+            text-align: center;
+
+            padding-left: 0;
+        }
+
+        &__title {
+
+            & span {
+                padding: 0 7px 2px;
+                margin: 0;
+            }
+        }
+
+        &__desc {
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+}

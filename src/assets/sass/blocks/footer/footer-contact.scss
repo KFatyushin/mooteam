@@ -1,0 +1,60 @@
+.footer-contact {
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 24px;
+    }
+
+    &__img {
+        margin-right: 12px;
+
+        & svg {
+            width: 36px;
+            height: 36px;
+            fill: #fff;
+        }
+    }
+
+    &__title {
+        font-size: 12px;
+        font-weight: 800;
+        color: #fff;
+
+        margin-bottom: 2px;
+    }
+
+    &__link {
+
+        & a {
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+
+    @media (max-width: $small) {
+        & svg {
+            width: 24px;
+            height: 24px;
+
+        }
+
+        &__title {
+            margin-bottom: 4px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            margin-right: 60px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

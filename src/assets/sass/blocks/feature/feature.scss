@@ -1,0 +1,17 @@
+.feature {
+    padding: 50px 0 70px;
+
+    &__top {
+        text-align: center;
+    }
+
+    &__desc {
+        max-width: 546px;
+
+        margin: 0 auto 47px;
+    }
+
+    @media (max-width: $medium) {
+        padding: 56px 0;
+    }
+}

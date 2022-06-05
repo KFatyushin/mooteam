@@ -1,0 +1,49 @@
+.advantages-form {
+    max-width: 584px;
+
+    text-align: center;
+
+    margin: 90px auto 0;
+
+    &__top {
+        max-width: 560px;
+
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 30px;
+
+        margin-bottom: 10px;
+    }
+
+    &__desk {
+        margin-bottom: 28px;
+    }
+
+    @media (max-width: $medium) {
+        margin-top: 70px;
+
+        &__title {
+            max-width: 375px;
+
+            font-size: 18px;
+
+            margin: 0 auto 12px;
+        }
+
+        &__desk {
+            max-width: 260px;
+
+            margin: 0 auto 24px;
+        }
+
+        & .send-mail {
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        margin-top: 40px;
+    }
+}

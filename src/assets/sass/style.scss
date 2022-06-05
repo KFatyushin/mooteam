@@ -1,0 +1,387 @@
+@import "vars";
+
+/* Fonts */
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff2") format("woff2"),  url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.ttf") format("ttf"), url("../fonts/#{$file_name}.eot") format("eot");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+@import "fonts";
+
+/* Default styles */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    position: relative;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: $text;
+
+    margin: 0;
+}
+
+menu, ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+p {
+    line-height: 150%;
+
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, textarea {
+    border: none;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    -webkit-appearance: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.site-page {
+    overflow: hidden;
+
+    &-prices {
+        overflow: initial;
+    }
+}
+
+.container {
+    max-width: 1224px;
+
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 130%;
+    color: #222;
+
+    margin-bottom: 24px;
+
+    @media (max-width: $medium) {
+        font-size: 30px;
+
+        margin-bottom: 20px;
+    }
+    @media (max-width: $small) {
+        font-size: 25px;
+
+        margin-bottom: 16px;
+    }
+}
+
+.gray-bg-of-block,
+.extra-list__item,
+.annexes-list__item {
+    background: #f8f9fa !important;
+}
+
+.btn {
+    display: inline-block;
+    background: $red;
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-weight: 700;
+    line-height: 20px;
+    color: $white;
+
+    padding: 17px 23px;
+
+    transition: background-color .3s;
+
+    &:hover {
+        background: $dark-red;
+    }
+
+    @media (max-width: $medium) {
+        padding: 10px 15px;
+    }
+}
+
+.btn-close {
+    display: flex;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+
+    position: absolute;
+
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        content: '';
+
+        width: 1px;
+        height: 100%;
+        display: block;
+        background: #000;
+
+        position: relative;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+
+        margin-left: -1px;
+    }
+}
+
+// contact form
+.wpcf7 .ajax-loader {
+    display: none;
+}
+.wpcf7-response-output {
+    display: none !important;
+}
+.wpcf7-not-valid-tip {
+    white-space: nowrap;
+
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+
+    @media (max-width: $medium) {
+        background: #fff;
+        outline: 2px solid #fff;
+
+        bottom: -48px;
+    }
+
+    @media (max-width: $ex-small) {
+        background: transparent;
+        outline: none;
+
+        bottom: -18px;
+        left: 18px;
+    }
+}
+
+/* BLOCKS */
+// swiper
+@import "vendor/swiper";
+@import "blocks/swiper-pagination";
+
+// hamburger
+@import "blocks/hamburger";
+
+// send mail
+@import "blocks/send-mail";
+
+// call request
+@import "blocks/call-request";
+
+// to run
+@import "blocks/to-run";
+
+// slides arrow
+@import "blocks/slides-arrow";
+
+// form counter
+@import "blocks/form-counter";
+
+// lightbox
+@import "blocks/lightbox";
+
+// Header
+@import "blocks/header/header";
+@import "blocks/header/header-navbar";
+@import "blocks/header/header-logo";
+@import "blocks/header/header-menu";
+@import "blocks/header/header-menu-list";
+@import "blocks/header/header-submenu";
+//@import "blocks/header/header-contact";
+@import "blocks/header/header-enter";
+@import "blocks/header/header-intro";
+
+// For whom
+@import "blocks/for-whom/for-whom";
+@import "blocks/for-whom/for-whom-top";
+@import "blocks/for-whom/for-whom-list";
+
+// Advantages
+@import "blocks/advantages/advantages";
+@import "blocks/advantages/advantages-top";
+@import "blocks/advantages/advantages-list";
+@import "blocks/advantages/advantages-form";
+
+// Evolution
+@import "blocks/evolution/evolution";
+@import "blocks/evolution/evolution-top";
+@import "blocks/evolution/evolution-list";
+
+// Goals
+@import "blocks/goals/goals";
+@import "blocks/goals/goals-top";
+@import "blocks/goals/goals-list";
+@import "blocks/goals/goals-form";
+
+// Tariffs
+@import "blocks/tariffs/tariffs";
+@import "blocks/tariffs/tariffs-content";
+@import "blocks/tariffs/tariffs-top";
+@import "blocks/tariffs/tariffs-item";
+@import "blocks/tariffs/tariffs-price";
+@import "blocks/tariffs/tariffs-parameter";
+@import "blocks/tariffs/tariffs-payment";
+
+// Reviews
+@import "blocks/reviews/reviews";
+@import "blocks/reviews/reviews-slides";
+
+// Tool
+@import "blocks/tool/tool";
+@import "blocks/tool/tool-top";
+@import "blocks/tool/tool-list";
+@import "blocks/tool/tool-sublist";
+@import "blocks/tool/tool-list-img";
+
+// Opportunity Intro
+@import "blocks/opportunity/opportunity-intro";
+// opportunity-for-whom
+@import "blocks/opportunity/opportunity-for-whom/opportunity-for-whom";
+@import "blocks/opportunity/opportunity-for-whom/opportunity-for-whom-top";
+@import "blocks/opportunity/opportunity-for-whom/opportunity-for-whom-tabs";
+@import "blocks/opportunity/opportunity-for-whom/opportunity-for-whom-img-list";
+@import "blocks/opportunity/opportunity-for-whom/opportunity-for-whom-arrows";
+
+// Extra
+@import "blocks/extra/extra";
+@import "blocks/extra/extra-list";
+
+// Write
+@import "blocks/write/write";
+@import "blocks/write/write-form";
+
+// Feature
+@import "blocks/feature/feature";
+@import "blocks/feature/feature-btns";
+@import "blocks/feature/feature-content";
+
+// Additional Benefits
+@import "blocks/additional-benefits/additional-benefits";
+@import "blocks/additional-benefits/additional-benefits-top";
+@import "blocks/additional-benefits/additional-benefits-imgs";
+@import "blocks/additional-benefits/additional-benefits-list";
+
+// Order Demo
+@import "blocks/order-demo/order-demo";
+@import "blocks/order-demo/order-demo-top";
+@import "blocks/order-demo/order-demo-form";
+
+// Offer
+@import "blocks/offer/offer";
+@import "blocks/offer/offer-sidebar";
+@import "blocks/offer/offer-content";
+@import "blocks/offer/offer-list";
+@import "blocks/offer/offer-sublist";
+
+// Contacts Intro
+@import "blocks/contacts/contacts-intro";
+@import "blocks/contacts/contacts-intro-socials";
+@import "blocks/contacts/contacts-extra";
+
+// What Necessary
+@import "blocks/what-necessary/what-necessary";
+@import "blocks/what-necessary/what-necessary-list";
+
+// Security
+@import "blocks/security/security-intro";
+@import "blocks/security/security-send";
+
+// Function
+@import "blocks/function/function-intro";
+@import "blocks/function/function-send";
+
+// Details
+@import "blocks/details/details";
+@import "blocks/details/details-table";
+@import "blocks/details/details-table-head";
+@import "blocks/details/details-table-content";
+
+// Prices
+@import "blocks/prices-intro";
+
+// Integrations Intro
+@import "blocks/integrations-intro";
+
+// Solutions
+@import "blocks/solutions/solutions";
+@import "blocks/solutions/solutions-top";
+@import "blocks/solutions/solutions-list";
+
+// Annexes
+@import "blocks/annexes/annexes";
+@import "blocks/annexes/annexes-btns";
+@import "blocks/annexes/annexes-list";
+
+// Partners
+@import "blocks/partners/partners";
+@import "blocks/partners/partners-list";
+
+// Wiki
+@import "blocks/wiki/wiki";
+@import "blocks/wiki/wiki-sidebar";
+@import "blocks/wiki/wiki-sidebar-menu";
+@import "blocks/wiki/wiki-sidebar-submenu";
+@import "blocks/wiki/wiki-content";
+@import "blocks/wiki/wiki-search";
+@import "blocks/wiki/wiki-img-slides";
+@import "blocks/wiki/wiki-pagination-page";
+
+// Footer
+@import "blocks/footer/footer";
+@import "blocks/footer/footer-menu";
+@import "blocks/footer/footer-submenu";
+@import "blocks/footer/footer-contact";
+@import "blocks/footer/footer-col-me";
+@import "blocks/footer/footer-bottom";
+
+// Scroll Top
+@import "blocks/scroll-top";
+
+// Quantity
+@import "blocks/quantity";
+
+// POPUP
+@import "blocks/popup/popup";
+@import "blocks/popup/popup-privacy-policy";
+@import "blocks/popup/popup-public-offer";
+@import "blocks/popup/popup-payment";

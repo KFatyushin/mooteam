@@ -1,0 +1,36 @@
+.details {
+    padding: 50px 0 70px;
+
+    & .container {
+        max-width: 1424px;
+    }
+
+    &__title {
+        text-align: center;
+
+        margin-bottom: 64px;
+    }
+
+    @media (max-width: $large) {
+
+        &__title {
+            margin-bottom: 52px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        padding: 70px 0 50px;
+
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        padding: 56px 0 32px;
+
+        &__title {
+            margin-bottom: 18px;
+        }
+    }
+}

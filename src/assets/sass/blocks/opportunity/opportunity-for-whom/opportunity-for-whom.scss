@@ -1,0 +1,23 @@
+.opportunity-for-whom {
+    padding: 50px 0 70px;
+
+    & .container {
+        max-width: 1424px;
+
+        position: relative;
+    }
+
+    &__wrap {
+        display: flex;
+    }
+
+    @media (max-width: $large) {
+        &__wrap {
+            display: block;
+        }
+    }
+
+    @media (max-width: $large) {
+        padding: 50px 0 70px;
+    }
+}

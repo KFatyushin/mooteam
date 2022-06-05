@@ -1,0 +1,44 @@
+.goals-list {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 70px;
+
+    @media (max-width: $large) {
+        margin-bottom: 70px;
+    }
+
+    @media (max-width: $medium) {
+        -ms-overflow-style: none;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__item {
+        min-width: 192px;
+
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 140%;
+        color: $purple;
+
+        margin: 45px 0 11px;
+    }
+
+    &__desk {
+        line-height: 140%;
+    }
+}

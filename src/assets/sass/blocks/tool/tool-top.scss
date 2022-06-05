@@ -1,0 +1,19 @@
+.tool-top {
+    max-width: 840px;
+
+    text-align: center;
+
+    margin: 0 auto 70px;
+
+    @media (max-width: $large) {
+        margin-bottom: 70px;
+    }
+
+    @media (max-width: $ex-small) {
+        margin-bottom: 32px;
+
+        &__desc p {
+            display: inline;
+        }
+    }
+}

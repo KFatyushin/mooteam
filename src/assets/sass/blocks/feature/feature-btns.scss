@@ -1,0 +1,60 @@
+.feature-btns {
+    width: auto;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 48px;
+
+    & .swiper-wrapper {
+        width: auto;
+    }
+
+    &__item {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+
+        font-weight: 400;
+        color: #000;
+        line-height: 140%;
+
+        padding: 10px 34px;
+
+        cursor: pointer;
+        transition: all .5s;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.swiper-slide-thumb-active {
+            background: $purple;
+            border-color: $purple;
+
+            color: #fff;
+            text-shadow: 0.2px 0.1px 0.1px #fff, 0.2px 0.1px 0.1px #fff;
+        }
+    }
+
+    @media (min-width: $medium) {
+        &__item:hover {
+            background: $purple;
+            border-color: $purple;
+
+            color: #fff;
+            text-shadow: 0.2px 0.1px 0.1px #fff, 0.2px 0.1px 0.1px #fff;
+        }
+    }
+
+    @media (max-width: $small) {
+        display: block;
+
+        &__item {
+            padding: 9px 16px;
+        }
+    }
+}

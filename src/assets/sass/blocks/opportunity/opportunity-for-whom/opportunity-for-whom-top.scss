@@ -1,0 +1,15 @@
+.opportunity-for-whom-top {
+    text-align: center;
+
+    margin-bottom: 80px;
+
+    &__desc {
+        max-width: 550px;
+
+        margin: 0 auto;
+    }
+
+    @media (max-width: $medium) {
+        margin-bottom: 56px;
+    }
+}

@@ -1,0 +1,29 @@
+.what-necessary-list {
+    max-width: 1400px;
+
+    margin-bottom: 70px;
+
+    & .swiper-wrapper {
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 320px;
+
+        &:not(:last-child) {
+            margin-right: 60px;
+        }
+    }
+
+    &__img {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 150%;
+
+        margin-bottom: 24px;
+    }
+}

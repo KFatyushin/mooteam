@@ -1,0 +1,64 @@
+.wiki-pagination-page {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-top: 56px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        line-height: 140%;
+
+        & a {
+            font-weight: 400;
+            color: #000;
+
+            position: relative;
+
+            &:before {
+                content: '';
+
+                width: 100%;
+                height: 1px;
+                background: #000;
+
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+            }
+        }
+
+        & svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        &_prev {
+            margin-right: 32px;
+
+            & svg {
+                transform: scaleX(-1);
+                margin-right: 4px;
+            }
+        }
+        &_next {
+
+            & svg {
+                margin-left: 4px;
+            }
+        }
+        &.no-active {
+            opacity: .5;
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        justify-content: space-between;
+
+        margin-top: 40px;
+    }
+}

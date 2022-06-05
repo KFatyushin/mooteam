@@ -1,0 +1,20 @@
+.for-whom-top {
+
+    margin-bottom: -5px;
+
+    &__desk {
+        max-width: 550px;
+    }
+
+    @media (max-width: $medium) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: $small) {
+        text-align: center;
+
+        &__desk {
+            margin: 0 auto;
+        }
+    }
+}

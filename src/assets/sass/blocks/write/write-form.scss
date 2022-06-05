@@ -1,0 +1,46 @@
+.write-form {
+    max-width: 434px;
+    width: 100%;
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        display: block;
+        background: #fff;
+        border-radius: 8px;
+        border: none;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        padding: 13px 16px;
+        margin-bottom: 12px;
+
+        &::placeholder {
+            color: #BDBDBD;
+        }
+    }
+    &__textarea {
+        height: 146px;
+        resize: none;
+
+        margin-bottom: 24px;
+    }
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__btn {
+        float: right;
+    }
+
+    @media (max-width: $ex-small) {
+
+        &__btn {
+            width: 100%;
+            height: 54px;
+            float: initial;
+        }
+    }
+}

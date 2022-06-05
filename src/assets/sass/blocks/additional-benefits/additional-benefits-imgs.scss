@@ -1,0 +1,196 @@
+.additional-benefits-imgs {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &__left-container,
+    &__right-container {
+        width: 693px;
+        clip-path: inset(-20px);
+    }
+
+    &:before {
+        content: "";
+        width: 208px;
+        height: 208px;
+        display: block;
+        background: url("../img/tool/icons/circles.svg") no-repeat 50%/cover;
+        position: absolute;
+        z-index: -1;
+    }
+    &_left {
+        right: 600px;
+
+        &:before {
+            top: -72px;
+            right: 57px;
+        }
+    }
+    &_right {
+        left: 721px;
+
+        &:before {
+            top: -60px;
+            left: -83px;
+        }
+    }
+
+    &__item {
+        max-width: 693px;
+
+        & img {
+            width: 100%;
+            height: auto;
+            box-shadow: 1px 4px 10px 2px rgba(81, 77, 77, 0.2);
+            border-radius: 8px;
+        }
+    }
+
+    &__left-arrows,
+    &__right-arrows {
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        right: 38px;
+        bottom: 38px;
+
+        & .slides-arrows__item {
+            width: 35px;
+            height: 35px;
+            background: transparent;
+
+            &:hover {
+                background: $purple;
+            }
+        }
+
+        & .slides-arrows__icon {
+            width: 12px;
+        }
+    }
+    &__right-arrows {
+        right: initial;
+        left: 120px;
+    }
+
+    &__left-pagination,
+    &__right-pagination {
+        display: flex;
+        align-items: center;
+
+        position: relative;
+        margin: 10px;
+
+        & .swiper-pagination-bullet {
+            width: 5px;
+            height: 5px;
+            background: #BDBDBD;
+            opacity: 1;
+
+            margin: 0 7px;
+
+            &-active {
+                width: 10px;
+                height: 10px;
+                background: #4b1b81;
+            }
+        }
+    }
+
+    @media (max-width: $large) {
+        &_left {
+            right: 536px;
+        }
+        &_right {
+            left: 592px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        &_left {
+            right: 410px;
+        }
+        &_right {
+            left: 410px;
+
+            &:before {
+                top: -51px;
+                left: -40px;
+            }
+        }
+    }
+
+    @media (max-width: $small) {
+        position: relative;
+        top: initial;
+        right: initial;
+        left: initial;
+        transform: none;
+
+        &__left-container,
+        &__right-container {
+            max-width: 693px;
+            width: auto;
+        }
+
+        &_left {
+            margin-bottom: 60px;
+
+            &:before {
+                right: -65px;
+            }
+        }
+        &_right {
+            order: -1;
+
+            margin-bottom: 60px;
+
+            &:before {
+                left: -100px;
+            }
+        }
+
+        &__item {
+            width: 100%!important;
+        }
+
+        &__right-arrows {
+            right: 38px;
+            left: initial;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        //display: none;
+
+        &:before {
+            width: 160px;
+            height: 160px;
+        }
+
+        &_left {
+            margin-bottom: 48px;
+
+            &:before {
+                top: initial;
+                bottom: -60px;
+                transform: rotate(-180deg);
+            }
+        }
+        &_right {
+            margin-bottom: 48px;
+
+            &:before {
+                left: -100px;
+            }
+        }
+
+        .additional-benefits-imgs__left-arrows,
+        .additional-benefits-imgs__right-arrows {
+            right: 15px;
+            bottom: 20px;
+        }
+    }
+
+}

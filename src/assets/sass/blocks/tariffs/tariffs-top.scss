@@ -1,0 +1,45 @@
+.tariffs-top {
+    max-width: 700px;
+    margin: 0 auto 50px;
+
+    text-align: center;
+
+    &__desc {
+        font-size: 24px;
+        line-height: 150%;
+    }
+
+    &__hint {
+        display: block;
+
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $red;
+    }
+
+    @media (max-width: $medium) {
+        &__title {
+            margin-bottom: 12px;
+        }
+
+        &__desc {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: $small) {
+        &__desc {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        max-width: 320px;
+
+        margin-bottom: 48px;
+
+        &__hint {
+            display: inline;
+        }
+    }
+}

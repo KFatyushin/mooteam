@@ -1,0 +1,119 @@
+.wiki-content {
+    width: 100%;
+    max-width: 1000px;
+
+    font-weight: 400;
+
+    &__title {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 140%;
+        color: #222;
+
+        margin-bottom: 16px;
+    }
+
+    & ul {
+        margin: 24px 0;
+        padding-left: 24px;
+
+        & li {
+            display: list-item;
+
+            font-weight: 400;
+            line-height: 140%;
+        }
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+        box-shadow: 1px 4px 10px 2px rgba(81, 77, 77, 0.2);
+        border-radius: 8px;
+    }
+
+    & h2, & h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 140%;
+        color: #4F4F4F;
+
+        margin-bottom: 16px;
+    }
+
+    /*&__section {
+        margin-bottom: 56px;
+    }
+
+    &__head {
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 140%;
+        color: #222;
+
+        margin-bottom: 16px;
+    }
+
+    &__head-desc {
+        max-width: 470px;
+    }
+
+    &__img {
+
+        & img {
+            width: 100%;
+            height: auto;
+            box-shadow: 1px 4px 10px 2px rgba(81, 77, 77, 0.2);
+            border-radius: 8px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 140%;
+        color: #4F4F4F;
+
+        margin-bottom: 16px;
+    }
+
+    &__list {
+        margin: 24px 0;
+        padding-left: 24px;
+
+        & li {
+            display: list-item;
+
+            font-weight: 400;
+            line-height: 140%;
+        }
+    }
+
+    &__desc {
+        font-weight: 400;
+
+        & p {
+            margin-bottom: 22px;
+        }
+    }*/
+
+    @media (max-width: $small) {
+        &__title {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        &__title {
+            font-size: 20px;
+        }
+
+        /*&__section {
+            margin-bottom: 40px;
+        }*/
+    }
+}

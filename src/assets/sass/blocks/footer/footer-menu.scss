@@ -1,0 +1,48 @@
+.footer-menu {
+    display: flex;
+    margin: 0 auto;
+
+    & > li {
+        margin: 0 45px;
+    }
+
+    & > li > a {
+        display: block;
+
+        font-weight: 800;
+        line-height: 20px;
+        color: $white;
+
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: $medium) {
+        width: 100%;
+        justify-content: space-around;
+        order: 1;
+
+        margin-top: -126px;
+        margin-left: 254px;
+
+        & > li {
+            margin: 0;
+        }
+    }
+
+    @media (max-width: $small) {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        margin-bottom: -40px;
+
+        & > li {
+            width: 100%;
+
+            margin: 0 40px 40px 0;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        margin: 30px 0 0;
+    }
+}

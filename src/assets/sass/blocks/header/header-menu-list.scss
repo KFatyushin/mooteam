@@ -1,0 +1,131 @@
+.header-menu-list {
+    display: flex;
+
+    & > li {
+        margin-left: 44px;
+        position: relative;
+
+
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        @media (min-width: $small) {
+            &:hover {
+                & .header-submenu {
+                    visibility: initial;
+                    opacity: 1;
+
+                    transform: translateY(100%);
+                }
+
+                & > a svg {
+                    transform: scaleY(-1);
+                }
+            }
+        }
+
+        @media (max-width: $large) {
+            margin-left: 28px;
+        }
+    }
+
+    & > li > a {
+        display: block;
+
+        font-size: 18px;
+        color: $white;
+
+        position: relative;
+        padding: 12px 0;
+
+        cursor: pointer;
+    }
+
+    @media (min-width: $small) {
+        &__link {
+            &:before,
+            &:after {
+                content: '';
+
+                width: 0;
+                height: 1px;
+                background: transparent;
+
+                position: absolute;
+                bottom: 3px;
+
+                transition: width .5s ease, background-color .5s ease;
+            }
+            &:before {
+                right: 50%;
+            }
+            &:after {
+                left: 50%;
+            }
+            &:hover:before,
+            &:hover:after {
+                width: 50%;
+                background: #FB6E41;
+            }
+        }
+    }
+
+    & > li > a svg {
+        width: 8px;
+        height: 8px;
+        fill: $white;
+
+        margin-left: 12px;
+        transform: scaleY(1);
+
+        transition: transform .5s cubic-bezier(.45,-1,.45,1.5);
+
+        &.active {
+            transform: scaleY(-1);
+        }
+    }
+
+    @media (max-width: $small) {
+
+        & > li {
+            margin-left: 44px;
+        }
+
+        & > li > a {
+            color: #000;
+
+            padding: 20px 0;
+        }
+
+        & > li > a svg {
+            fill: #000;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        & > li {
+            margin-left: 30px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;
+        flex-wrap: wrap;
+
+        & > li {
+            width: 100%;
+
+            margin: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        & > li > a {
+            padding: 12px 0;
+        }
+    }
+}

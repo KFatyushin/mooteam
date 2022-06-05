@@ -1,0 +1,88 @@
+.integration-intro {
+    padding: 50px 0;
+
+    & .container {
+        max-width: 1424px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__content {
+        max-width: 770px;
+
+        margin-right: 50px;
+    }
+
+    &__title {
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 120%;
+        color: #000;
+
+        margin-bottom: 28px;
+    }
+
+    &__desc {
+        max-width: 560px;
+    }
+
+    @media (max-width: $large) {
+        padding: 58px 0;
+
+        &__title {
+            font-size: 44px;
+        }
+    }
+
+    @media (max-width: $medium) {
+
+        &__content {
+            max-width: 480px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__img {
+            max-width: 377px;
+            min-width: 250px;
+
+            & img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: $small) {
+        padding: 50px 0;
+
+        &__content {
+            min-width: 285px;
+        }
+
+        &__title {
+            font-size: 26px;
+
+            margin-bottom: 16px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        padding: 32px 0 40px;
+
+        &__content {
+            min-width: initial;
+
+            text-align: center;
+
+            margin: 0 auto;
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+}

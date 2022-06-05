@@ -1,0 +1,29 @@
+.additional-benefits-top {
+    margin-bottom: 66px;
+
+    & .container {
+        max-width: 1424px;
+    }
+
+    &__desc {
+        max-width: 440px;
+    }
+
+    @media (max-width: $large) {
+        margin-bottom: 120px;
+    }
+
+    @media (max-width: $small) {
+        margin-bottom: 50px;
+    }
+
+    @media (max-width: $ex-small) {
+        text-align: center;
+
+        margin-bottom: 32px;
+
+        &__desc {
+            margin: 0 auto;
+        }
+    }
+}

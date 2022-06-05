@@ -1,0 +1,38 @@
+.tariffs-parameter {
+    margin-bottom: 24px;
+
+    &:last-child {
+        margin-bottom: 0;
+
+        .tariffs-parameter__count {
+            height: 48px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 9px;
+    }
+
+    &__count {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    &__link {
+        color: #533278;
+        font-size: 14px;
+        text-decoration: underline;
+    }
+
+    @media (max-width: $ex-small) {
+        margin-bottom: 16px;
+
+        &:last-child {
+            padding: 0 5px;
+        }
+
+        &__count {
+            font-size: 18px;
+        }
+    }
+}

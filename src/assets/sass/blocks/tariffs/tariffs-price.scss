@@ -1,0 +1,59 @@
+.tariffs-price {
+    height: 63px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 130%;
+
+    margin-bottom: 32px;
+
+    &__wrap {
+        display: inline-flex;
+        align-items: flex-end;
+
+        margin-bottom: auto;
+    }
+
+    &__dash {
+        font-size: 16px;
+        line-height: 36px;
+
+        margin: 0 5px 0 8px;
+    }
+
+    &__term {
+        display: inline-block;
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 66px;
+
+        margin-top: -29px;
+    }
+
+    &__title {
+        display: block;
+
+        padding-top: 10px;
+    }
+
+    @media (max-width: $ex-small) {
+        font-size: 30px;
+
+        padding: 0 20px;
+        margin-bottom: 0;
+
+        &__dash {
+            line-height: 32px;
+        }
+
+        &__term {
+            line-height: 79px;
+            margin-top: -34px;
+        }
+    }
+}

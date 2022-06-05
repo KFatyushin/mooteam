@@ -1,0 +1,25 @@
+.offer-list {
+
+    &__img {
+        max-width: 864px;
+
+        padding: 24px 0 8px;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__item {
+        margin-bottom: 21px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__addition {
+        padding: 8px 0 0 12px;
+    }
+}

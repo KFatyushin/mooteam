@@ -1,0 +1,50 @@
+.tool-sublist {
+    max-height: 0;
+
+    transition: max-height 1s;
+
+    &__title {
+        font-weight: 400;
+
+        margin-bottom: 8px;
+    }
+
+    &__item {
+        margin-bottom: 4px;
+
+        &:before {
+            content: '\2022';
+
+            padding: 0 5px 0 10px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        display: flex;
+
+        &__title {
+            min-width: 180px;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+
+            transform: translateY(-34px);
+        }
+
+        &__item:nth-child(odd) {
+            width: 320px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        display: block;
+
+        &__list {
+            flex-direction: column;
+
+            transform: translateY(0);
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.header-enter {
+    margin-left: 58px;
+
+    cursor: pointer;
+
+    &__icon {
+        display: none;
+    }
+
+    @media (max-width: $medium) {
+        margin-left: 21px;
+
+        & a.btn span {
+            display: none;
+        }
+    }
+
+    @media (max-width: $small) {
+        margin-left: auto;
+
+        & a.btn {
+            display: none;
+        }
+
+        &__icon {
+            width: 22px;
+            height: 22px;
+            display: block;
+        }
+    }
+}

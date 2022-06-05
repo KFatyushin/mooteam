@@ -1,0 +1,140 @@
+.wiki-sidebar {
+    height: auto;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-self: flex-start;
+    background: #FBFBFC;
+    border-radius: 8px;
+
+    padding: 32px;
+
+    box-sizing: border-box;
+
+    @media (min-width: $medium) {
+        transform: none!important;
+    }
+
+    &-container  {
+        width: 100%;
+        max-width: 320px;
+
+        margin-right: 40px;
+    }
+
+    & > li {
+        height: auto;
+
+        margin-bottom: 24px;
+
+        & > a {
+            display: block;
+
+            font-size: 16px;
+            font-weight: 900;
+            color: #000;
+
+            cursor: pointer;
+        }
+
+        & svg {
+            width: 8px;
+            height: 6px;
+
+            margin-left: 8px;
+
+            transition: transform .5s cubic-bezier(.45,-1,.45,1.5);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__btn {
+        white-space: nowrap;
+
+        &.active svg {
+            transform: scaleY(-1);
+        }
+    }
+
+    @media (min-width: $medium) {
+        &__btn {
+
+            & svg {
+                transform: scaleY(-1);
+            }
+
+            &.active svg {
+                transform: scaleY(1);
+            }
+        }
+    }
+
+    @media (max-width: $medium) {
+        width: auto;
+        display: inline-flex;
+        flex-direction: initial;
+        background: transparent;
+        pointer-events: initial;
+
+        padding: 0;
+
+        &-container {
+            max-width: initial;
+            pointer-events: none;
+
+            margin-bottom: 40px;
+        }
+
+        & > li {
+            width: auto!important;
+            margin-bottom: 0;
+            margin-right: 8px;
+
+            position: relative;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            & > a {
+                background: #fff;
+                border: 1px solid #000000;
+                border-radius: 8px;
+
+                font-weight: 500;
+
+                margin-bottom: 0;
+                padding: 8px 16px;
+
+                transition: background-color .5s, color .5s;
+
+                &.active {
+                    background: $purple;
+
+                    color: #fff;
+
+                    & > svg {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $ex-small) {
+
+        &-container {
+            margin-bottom: 32px;
+        }
+
+        & > li {
+
+            &:last-child .wiki-sidebar-menu {
+                left: initial;
+                right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.footer-menu .sub-menu {
+
+    & > li {
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    & > li > a {
+        font-weight: 400;
+        color: #fff;
+
+        @media (min-width: $small) {
+            position: relative;
+
+            &:before,
+            &:after {
+                content: '';
+
+                width: 0;
+                height: 1px;
+                background: transparent;
+
+                position: absolute;
+                bottom: -5px;
+
+                transition: width .5s ease, background-color .5s ease;
+            }
+            &:before {
+                right: 50%;
+            }
+            &:after {
+                left: 50%;
+            }
+            &:hover:before,
+            &:hover:after {
+                width: 50%;
+                background: #FB6E41;
+            }
+        }
+    }
+
+    @media (max-width: $small) {
+        max-width: 460px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px 28px;
+
+        & > li {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: $small) {
+        max-width: initial;
+        width: 100%;
+    }
+}

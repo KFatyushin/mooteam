@@ -1,0 +1,49 @@
+.goals-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+        max-width: 540px;
+
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 130%;
+        color: #222;
+    }
+
+    @media (max-width: $large) {
+        &__title {
+            font-size: 24px;
+        }
+
+        & .send-mail {
+            max-width: 520px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        max-width: 800px;
+        margin: 0 auto;
+
+        &__title {
+            max-width: 330px;
+
+            font-size: 18px;
+        }
+
+        & .send-mail {
+            max-width: 414px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        flex-direction: column;
+
+        text-align: center;
+
+        &__title {
+            margin-bottom: 24px;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.footer-col-me {
+
+    &__btn {
+        width: 296px;
+        display: inline-block;
+        border: 1px solid $white;
+        border-radius: 8px;
+        background: transparent;
+
+        color: $white;
+        font-weight: 700;
+        line-height: 20px;
+
+        padding: 17px 32px;
+
+        transition: border .5s, background-color .5s;
+        cursor: pointer;
+
+        &:hover {
+            background: $red;
+
+            border-color: $red;
+        }
+    }
+
+    & .call-request {
+        width: 296px;
+
+        margin-bottom: -8px;
+
+        &__form {
+            background: transparent;
+            border-color: $white;
+        }
+
+        &__code {
+            color: $white;
+        }
+
+        &__input {
+            color: $white;
+
+            &::placeholder {
+                color: rgba(255,255,255,.5);
+            }
+        }
+
+        &-thanks {
+            background: $purple;
+
+            color: $white;
+        }
+    }
+
+    @media (max-width: $medium) {
+        margin-left: auto;
+
+        & .call-request {
+            margin-left: auto;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        width: 100%;
+        order: 3;
+
+        & .call-request {
+            width: 100%;
+        }
+
+        &__btn {
+            width: 100%;
+
+            text-align: center;
+
+            padding: 18px;
+        }
+    }
+}

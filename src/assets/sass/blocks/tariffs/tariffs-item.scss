@@ -1,0 +1,124 @@
+.tariffs-item {
+    width: 220px;
+    border-right: 1px solid #E0E0E0;
+    background: #fff;
+
+    color: #000;
+    text-align: center;
+
+    padding: 32px 18px;
+
+    transition: background-color .5s;
+
+    &:hover {
+        background: #F4F4F4;
+    }
+
+    // action
+    &_action {
+        flex-shrink: 0;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+
+        padding-top: 0;
+        margin-right: 15px;
+
+        @media (max-width: $ex-small) {
+            margin-right: 8px;
+        }
+    }
+
+    &__action {
+        background: $purple;
+        border-radius: 8px 8px 0 0;
+
+        font-weight: 900;
+        color: #fff;
+
+        padding: 13px 0;
+        margin: -1px -19px 32px;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 130%;
+        text-transform: uppercase;
+
+        margin-bottom: 24px;
+    }
+
+    &__parameters {
+        margin-bottom: 32px;
+    }
+
+    &__btn .btn {
+        width: 100%;
+        height: 54px;
+
+        font-weight: 500;
+
+        @media (max-width: $medium) {
+            padding: 17px 15px;
+        }
+    }
+
+    // corporation
+    &_corporation {
+        flex-shrink: 0;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+
+        .tariffs-item__title {
+            font-weight: 600;
+        }
+
+        .tariffs-price {
+            display: block;
+
+            font-size: 15px;
+        }
+
+        .tariffs-item__parameters {
+            margin-bottom: 109.2px;
+        }
+    }
+
+    &__col-my .btn {
+        width: 100%;
+        background: #fff;
+        border: 1px solid #E0E0E0;
+
+        font-weight: 500;
+        color: #828282;
+
+        padding: 17px 10px;
+    }
+
+    @media (max-width: $ex-small) {
+        padding: 12px 18px 15px;
+
+        &_action {
+            padding-top: 0;
+        }
+        &__action {
+            margin-bottom: 12px;
+        }
+
+        &__title {
+            font-size: 20px;
+
+            margin-bottom: 4px;
+        }
+
+        &__parameters {
+            margin-bottom: 24px;
+        }
+
+        &_corporation {
+            & .tariffs-item__parameters {
+                margin-bottom: 89.2px;
+            }
+        }
+    }
+}

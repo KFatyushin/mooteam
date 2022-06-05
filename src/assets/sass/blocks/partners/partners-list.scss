@@ -1,0 +1,41 @@
+.partners-list {
+
+    & .swiper-wrapper {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: auto!important;
+
+        margin-right: 27px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: $large) {
+
+        &__item {
+            & img {
+                width: 160px;
+            }
+        }
+    }
+
+    @media (max-width: $small) {
+
+        &__item {
+            & img {
+                width: 120px;
+            }
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        &__item {
+            margin-right: 15px;
+        }
+    }
+}

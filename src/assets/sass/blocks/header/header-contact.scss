@@ -1,0 +1,140 @@
+.header-contact {
+    display: block;
+    position: relative;
+    margin-left: 44px;
+
+    @media (max-width: $large) {
+        margin-left: 28px;
+    }
+
+    &__main-btn {
+        color: $white;
+    }
+    &__triangle-icon {
+        width: 8px;
+        height: 6px;
+        fill: $white;
+
+        margin-left: 8px;
+        transform: scaleY(1);
+
+        transition: transform .5s cubic-bezier(.45,-1,.45,1.5);
+
+        &.active {
+            transform: scaleY(-1);
+
+            transition: transform .5s cubic-bezier(.45,-1,.45,1.5);
+        }
+    }
+
+    &__block {
+        display: none;
+        width: 344px;
+        background: #FBFBFC;
+        border-radius: 8px;
+        box-shadow: 1px 4px 10px 2px rgba(81, 77, 77, 0.2);
+
+        padding: 32px 24px 20px;
+        position: absolute;
+        top: 32px;
+        right: 0;
+        z-index: 100;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__item {
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 140%;
+        color: #828282;
+
+        margin-bottom: 4px;
+    }
+
+    &__link {
+        font-weight: 600;
+        line-height: 140%;
+        color: #000;
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        background: #fbfbfc;
+        border: 1px solid #FF5C35;
+        border-radius: 8px;
+        cursor: pointer;
+
+        line-height: 20px;
+        color: #000;
+        text-align: center;
+
+        padding: 18px;
+
+        transition: .5s;
+
+        &:hover {
+            background: $red;
+
+            color: $white;
+        }
+        &:focus {
+            background: $light-red;
+        }
+    }
+
+    &__close {
+        top: 21px;
+        right: 21px;
+    }
+
+    @media (max-width: $small) {
+        margin-left: auto;
+
+        &__main-btn {
+            color: #000;
+
+            margin-top: -20px;
+            padding: 20px 0;
+        }
+
+        &__triangle-icon {
+            fill: #000;
+        }
+
+        &__block {
+            top: 38px;
+            right: -12px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        display: none;
+        margin-left: 0;
+
+        &__main-btn {
+            display: none;
+        }
+
+        &__block {
+            display: block !important;
+            width: 100%;
+            box-shadow: none;
+
+            padding: 32px 0 0;
+            position: relative;
+            right: 0;
+            top: 0;
+        }
+
+        &__close {
+            display: none;
+        }
+    }
+}
